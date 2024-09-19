@@ -17,3 +17,11 @@ class Estudante extends Pessoa {
         
     }
 }
+
+//Classe Funcionário que herda de Pessoa
+class Funcionário extends Pessoa {
+    constructor(nome, idade, altura, peso, salário) {
+        super(nome, idade, altura, peso);
+        this.salário = salário;
+    }
+}
