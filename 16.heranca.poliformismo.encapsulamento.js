@@ -81,3 +81,19 @@ class Paladino extends Personagem {
   }
 }
 
+class Mecanico extends Personagem {
+  constructor(name, nivel, vida, mana, engenharia) {
+    super(name, "Paladino", nivel, vida, mana);
+    this.engenharia = engenharia;
+  }
+
+  receberDano(dano) {
+    const danoReduzido = dano - this.engenharia;
+    super.receberDano(danoReduzido);
+    console.log(`${this.nome} usou sua engenharia para reduzir o dano em (${this.engenharia})!`);
+  }
+
+  construirTorre() {
+    console.log(`${this.nome} construiu uma torre defensiva!`);
+  }
+}
