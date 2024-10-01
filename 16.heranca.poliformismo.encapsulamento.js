@@ -28,4 +28,24 @@ class Personagem {
   set classe(classe) {
     this.#classe = classe;
   }
+  atacar(...args) {
+    if (args.length === 0) {
+        console.log(`${this.#nome} realizou um ataque normal!`);
+    } else if (args.length === 1) {
+        console.log(`${this.#nome} atacou com um poder de ${args[0]}!`);
+    } else if (args.length === 2) {
+        console.log(`${this.#nome} usou ${args[1]} e atacou com ${args[0]} de poder!`);
+    } else {
+        console.log(`Número de argumentos não suportados`);
+    }
+  }
+
+  defesa() {
+    console.log(`${this.#nome} se defendeu ${this.#nivel * 2}  pontos de defesa!`);
+  }
+  receberDano(dano) {
+    this.#vida -= dano;
+    console.log(`${this.#nome} recebeu ${dano} de dano. Vida restante: ${this.#vida}`);
+  }
 }
+
