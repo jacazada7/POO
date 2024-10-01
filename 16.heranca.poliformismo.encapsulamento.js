@@ -64,3 +64,20 @@ class Assassino extends Personagem {
     }
 }
 
+class Paladino extends Personagem {
+  constructor(name, nivel, vida, mana, fe) {
+    super(name, "Paladino", nivel, vida, mana);
+    this.fe = fe;
+  }
+
+  defesa() {
+    console.log(
+      `${this.nome} se defendeu com o escudo sagrado, absorvendo maisa dano com base de fe (${this.fe})!`);
+  }
+
+  curar() {
+    console.log(
+      `${this.nome} use sua fe para curar a si mesmo ou aliado!`);
+  }
+}
+
