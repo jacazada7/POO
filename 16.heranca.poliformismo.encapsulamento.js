@@ -113,3 +113,16 @@ const mecanico = new Mecanico("Roberto das Engrenagens", 8, 90, 40, 5);
 
 mecanico.receberDano(30);
 mecanico.construirTorre();
+
+console.log("...................................................");
+console.log("modificando os objetos usando setters:");
+console.log("=============================================");
+
+assassino.nome = "Raven";
+console.log(`Nome modificado: ${assassino.nome}`);
+assassino.atacar();
+
+mecanico.mana = 60;
+console.log(`Mana modificada: ${mecanico.mana}`);
+mecanico.receberDano(30);
+
