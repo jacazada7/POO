@@ -28,3 +28,18 @@ class Guerreiro extends Personagem {
         console.log(`${this.nome} levanta o escudo para se defender!`);
     }
 }
+
+class Mago extends Personagem {
+    constructor(nome, magia) {
+        super(nome);
+        this.magia = magia;
+    }
+
+    atacar() {
+        console.log(`${this.nome} lança a magia ${this.magia}!`);
+    }
+
+    defender() {
+        console.log(`${this.nome} usa um escudo mágico para se defender!`);
+    }
+}
