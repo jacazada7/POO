@@ -43,3 +43,17 @@ class Mago extends Personagem {
         console.log(`${this.nome} usa um escudo mágico para se defender!`);
     }
 }
+
+try {
+    const Personagem = new Personagem("Invalido");
+} catch (error) {
+    console.error(error.message);
+}
+
+const guerreiro = new Guerreiro("Thorin", "Espada");
+guerreiro.atacar(); // Saída: Ragnar ataca com a Espada de Ferro!
+guerreiro.defender(); // Saída: Ragnar levanta o escudo para se defender!
+
+const mago = new Mago("Gandalf", "Bola de Fogo");
+mago.atacar(); // Saída: Thor lança a magia Fogo Solar!
+mago.defender(); // Saída: Thor usa um escudo mágico para se defender!
