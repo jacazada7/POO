@@ -20,6 +20,7 @@ class Personagem {
         }   else {
             console.log(`Número de argumentos não suportados`);
         }
+
     }
     receberDano(dano) {
         this.vida -= dano;
